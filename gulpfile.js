@@ -6,8 +6,7 @@ gulp.task('typescript', () => {
         .pipe(ts({
             outDir: 'dist',
             sourceMap: true,
-            noImplicitAny: true,
-            noImplicitAny: false,
+            noImplicitAny: false
         }))
         .pipe(gulp.dest('dist'));
 });

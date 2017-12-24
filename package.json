@@ -5,7 +5,7 @@
   "main": "dist/App.js",
   "scripts": {
     "prepublish": "typings install",
-    "test": "mocha",
+    "test": "mocha -r ts-node/register test/**/*.spec.ts",
     "electron": "electron dist/App",
     "package-win32": "electron-packager . template-app --overwrite --asar --platform=win32 --arch=ia32 --prune=true --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"Electron Template App\"",
     "package-mac": "electron-packager . --overwrite --platform=darwin --arch=x64 --icon=assets/icons/mac/icon.icns --prune=true --out=release-builds",
@@ -14,9 +14,16 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/chai": "^4.0.10",
+    "@types/electron": "^1.6.10",
+    "@types/mocha": "^2.2.45",
+    "@types/node": "^8.5.2",
+    "chai": "^4.1.2",
     "electron": "^1.7.9",
     "electron-packager": "^10.1.0",
+    "mocha": "^4.0.1",
     "spectron": "^3.7.2",
+    "ts-node": "^4.1.0",
     "typings": "^2.1.1"
   },
   "dependencies": {
